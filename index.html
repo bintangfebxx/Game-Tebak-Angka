@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="title">Permainan Tebak Angka '123'</h1>
+  <h2 id="title">by Bintang Dekil</h2>
+  <div id="content">
+
+    <div class="subcontent left" id="main">
+      <h3>Silahkan menebak di sini</h3>
+      <hr>
+
+      <div id="beforePlay">
+        <p>Tekan tombol "Play" di bawah jika sudah siap</p>
+        <button id="playButton">Bermain</button>  
+      </div>
+
+      <div id="duringPlay" hidden>
+        <p>Silahkan menebak angka!</p>
+        <p>Jawaban Anda:</p>
+        <h1>"<span id="jawabanUser"></span>"</h1>
+        <button class="answer-button" id="answer-button1">1</button>
+        <button class="answer-button" id="answer-button2">2</button>
+        <button class="answer-button" id="answer-button3">3</button>
+        <p id="info-salah" hidden>"<span id="jawabanSalah"></span>" bukan jawabannya...</p>
+      </div>
+
+      <div id="afterPlay" hidden>
+        <p>Selamat tebakan Anda benar!</p>
+        <p>Jawabannya adalah:</p>
+        <h1>"<span id="jawabanBenar"></span>"</h1>
+        <p>Silahkan refresh untuk mencoba lagi</p>
+      </div>
+    </div>
+
+    <div class="subcontent right" id="local">
+      <h3>Local Stats</h3>
+      <hr>
+      <p>Jumlah kombinasi yang berhasil ditebak:</p>
+      <p id="totalKombinasi"></p>
+      <p>Jumlah tebakan salah terbanyak dalam sekali main:</p>
+      <p id="totalSalah"></p>
+      <button id="clearButton">Hapus Semua Data</button>
+    </div>
+
+    <div class="subcontent left" id="session">
+      <h3>Game Session Stats</h3>
+      <hr>
+      <p>Jumlah tebakan salah:</p>
+      <p id="jumlahSalah"></p>
+    </div>
+
+    <div class="subcontent right" id="instruksi">
+      <h3>Cara Bermain</h3>
+      <hr>
+      <div class="list-instruksi">
+        <p>Selamat datang ke permainan tebak angka, berikut
+          instruksinya:
+        </p>
+        <ul>
+          <li>Cari kombinasi angka yang terdiri dari '1', '2', dan '3'.</li>
+          <li>Angka tidak bisa dipakai dua kali dalam kombinasi.</li>
+          <li>Angka yang ditebak hanya memiliki 3 karakter saja.</li>
+          <li>Have fun sayang!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
